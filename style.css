@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --p-color: hsl(30, 10%, 34%);
+    --background-color: hsl(30, 54%, 90%);
+    --title-color: hsl(24, 5%, 18%);
+    --subtitle-color: hsl(14, 45%, 36%);
+}
+
+
+.young-serif-regular {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {margin: 0}
+
+body {
+    background: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-block: 120px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: white;   
+    padding: 36px;
+    width: 650px;
+    border-radius: 24px;
+}
+
+.illustration {
+    border-radius: 10px;
+}
+
+.title {
+    color: var(--title-color);
+    font-size: 40px;
+    margin: 24px 0;
+}
+h2 {
+    color: var(--subtitle-color);
+    font-size: 28px;
+    margin-block: 10px;
+}
+
+.title, h2 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+
+.infobox {
+    background: hsl(330, 100%, 98%);
+    padding: 24px;
+    border-radius: 10px;
+    margin: 28px 0;
+}
+
+.infotitle {
+    color: hsl(332, 51%, 32%);
+    font-family: 'Outfit', serif;
+    font-weight: 600;
+}
+
+ul, ol {
+    padding-left: 1em;
+
+}
+
+li {
+  padding-left: 1.6em;
+}
+
+ul li::marker {
+    content: "•";
+}
+
+::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+
+li, ul, ol {
+    margin: 10px 0;
+    margin-left: 4px;
+}
+
+.preplist::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+hr {
+    background: hsl(30, 18%, 87%);
+    border: none;
+    height: 1px;
+    margin-block: 10px;
+}
+
+p, li, td {
+    font-size: 16px;
+    font-family: "Outfit", serif;
+    color: var(--p-color);
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.nutrition-table {
+    margin-top: 18px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition-table-row:not(:last-child) {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition-table-row td {
+    padding-block: 10px;
+}
+
+.normal {
+    position: relative;
+    left: 30px
+}
+
+.bold {
+    font-weight: 700;
+    color: hsl(14, 45%, 36%);
+}
+
+
+@media (max-width: 750px) {
+    body {
+        padding: 0 0;
+    }
+    main {
+        width: 100%;
+        border-radius: 0;
+        padding: 0 30px 40px 30px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+    
+    .illustration {
+        border-radius: 0;
+        width: calc(100% + 36px*2);
+        margin-left: -36px;
+        margin-right: -36px;
+    }
+}
